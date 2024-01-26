@@ -1,0 +1,3 @@
+POST /scores 201 - PostmanRuntime/7.36.0 ::1
+POST /scores 201 - PostmanRuntime/7.36.0 ::1
+POST /scores 201 - PostmanRuntime/7.36.0 ::1

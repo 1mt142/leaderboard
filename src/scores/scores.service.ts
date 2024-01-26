@@ -19,8 +19,13 @@ export class ScoresService {
     },
     decodedToken: any,
   ): Promise<Score[]> {
-    const name = decodedToken.username;
-    const payload = { name, score: scoreData.score };
+    const nameFromToken = decodedToken.username;
+    let payload = {};
+    if (decodedToken.user_type === 'admin') {
+      payload = { name: scoreData.name, score: scoreData.score };
+    } else {
+      payload = { name: nameFromToken, score: scoreData.score };
+    }
     const newScore = this.scoreRepository.create(payload);
     await this.scoreRepository.save(newScore);
 

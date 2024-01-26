@@ -2,9 +2,10 @@ import { Controller, Post, Body, UseGuards, Headers } from '@nestjs/common';
 import { ScoresService } from './scores.service';
 import { AuthGuard } from 'src/auth/auth.guard';
 import * as jwt from 'jsonwebtoken';
+import { RateLimiterGuard } from 'nestjs-rate-limiter';
 
 @Controller('scores')
-@UseGuards(AuthGuard)
+@UseGuards(AuthGuard, RateLimiterGuard)
 export class ScoresController {
   constructor(private readonly scoresService: ScoresService) {}
 
