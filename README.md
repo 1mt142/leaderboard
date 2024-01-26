@@ -69,4 +69,4 @@ DB_USERNAME="root"
 DB_PASSWORD="mysql-password"
 DATABASE_NAME="backendtask"
 
-::: RUN :
+::: RUN : npm run start:dev
