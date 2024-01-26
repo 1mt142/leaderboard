@@ -47,6 +47,7 @@ The API uses JSON Web Tokens (JWT) for authentication. Include the JWT token in 
 - **URL:** `/scores`
 - **Method:** `POST`
 - \*\*Authorization:Bearer {{token}}
+  if user is admin then it will take "name":"username" alogwith score
 - **Request Payload:**
   ```json
   {
