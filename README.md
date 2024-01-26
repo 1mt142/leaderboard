@@ -59,3 +59,13 @@ The API uses JSON Web Tokens (JWT) for authentication. Include the JWT token in 
 - **URL:** `/leaderboard`
 - **Method:** `GET`
 - \*\*Authorization:Bearer {{token}}
+
+make a Database with is ...
+
+DB_CONNECTION="mysql"
+DB_PORT="3306"
+DB_USERNAME="root"
+DB_PASSWORD="mysql-password"
+DATABASE_NAME="backendtask"
+
+::: RUN :
